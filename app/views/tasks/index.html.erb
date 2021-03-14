@@ -1,7 +1,44 @@
-<h1>These are the tasks</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/dc5e9e9c8c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="banner">
+  <div class="container border-bottom border-white">
+    <h1>You have things to do, dont you?</h1>
+    <p>We can help with that...</p>
+    <a class="btn btn-flat" href="#">Add a task</a>
+  </div>
+</div>
+
 <% @tasks.each do |task| %>
 <h1><%= task.title %> - <%= task.completed %></h1>
-<h1><%= link_to 'details', task_path(task.id)%></h1>
+<p><%= link_to 'details', task_path(task.id)%></p>
 <% end %>
 
 <%= link_to 'new task?', new_task_path %>
+<h1 class="bg-white">hihi</h1>
+</body>
+
+<footer>
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    Made with <i class="fas fa-heart"></i> at DDD
+  </div>
+</div>
+
+</footer>
+</html>
